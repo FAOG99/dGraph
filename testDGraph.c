@@ -12,6 +12,6 @@ int main(void){
     addVertex(G, &y);
     printf("Size: %d \n", sizeGraph(G));
     addEdge(G, &x, &y);
-    setEdgeLabel(G, &x, &y, &n);
-    printf("Label: %d \n", getEdgeLabel(G, &x, &y));
+   // setEdgeLabel(G, &x, &y, &n);
+   // printf("Label: %d \n", getEdgeLabel(G, &x, &y));
 }

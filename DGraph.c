@@ -70,7 +70,9 @@ Type removeVertex(DGraph graph, Type x){
 }
 
 void addEdge(DGraph graph, Type x, Type y){
-    if (listSearch(graph->vertices, x) != -1 && listSearch(graph->vertices, y) != -1){
+    int index_x = listSearch(graph->vertices, x);
+    int index_y = listSearch(graph->vertices, y);
+    if (listGet(graph->vertices, index_x) != NULL && listGet(graph->vertices, index_y) != NULL){
         Vertex vertex_x = listGet(graph->vertices, listSearch(graph->vertices, x));
         Vertex vertex_y = listGet(graph->vertices, listSearch(graph->vertices, y));
         Edge edge = malloc(sizeof(struct strEdge));
